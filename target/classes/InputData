@@ -1,0 +1,24 @@
+URL = http://127.0.0.1/orangehrm-2.5.0.2/login.php
+
+UN = selenium
+Pwd = ragiharuni
+
+XUN = //input[@name='txtUserName']
+XPwd = //input[@name='txtPassword']
+XSub = //input[@type='Submit']
+
+XPIM = //li[@id='pim']
+XAdd = //span[text()='Add Employee']
+
+XF = //iframe[@id='rightMenu']
+
+XID = //input[@id='txtEmployeeId']
+XLN = //input[@id='txtEmpLastName']
+XFN = //input[@id='txtEmpFirstName']
+XMN = //input[@id='txtEmpMiddleName']
+XNN = //input[@id='txtEmpNickName']
+XPhoto = //input[@id='photofile']
+XSave = //input[@id='btnEdit']
+XBack = //input[@type='button']
+
+XEdit = //input[@id='btnEditPers']

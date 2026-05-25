@@ -1,0 +1,214 @@
+package TestingPack;
+
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.io.FileInputStream;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
+
+public class Scripting extends ReusedMethods {
+	
+	@Test
+	 public void Login() throws Exception {
+		 driver.get(obj.getProperty("URL"));
+		 xp("XUN").sendKeys(obj.getProperty("UN"));
+		 xp("XPwd").sendKeys(obj.getProperty("Pwd"));
+		 xp("XSub").click();
+		 ss("After Login");
+		 t(1);
+		 
+	 }
+
+	
+	public void addemp() throws Exception {
+		
+		t(2);		
+		Actions A = new Actions(driver);		 
+		 A.moveToElement(xp("XPIM")).perform();	
+		 t(1);
+		 xp("XAdd").click();
+		 t(1);
+		 driver.switchTo().frame(xp("XF"));
+		 t(1);
+		 xp("XID").clear();
+		 xp("XID").sendKeys("1145");
+		 xp("XLN").sendKeys("aishwarya");
+		 xp("XFN").sendKeys("rai");
+		 xp("XMN").sendKeys("bachan");
+		 xp("XNN").sendKeys("aish");
+		 
+		 t(1);
+		 
+		 A.moveToElement(xp("XPhoto")).click().perform();
+			
+			StringSelection ss = new StringSelection("C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\photos\\TomandJerry.JPG");
+			
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+			t(1);
+			
+			Robot R = new Robot();
+			
+			R.keyPress(KeyEvent.VK_CONTROL);
+			R.keyPress(KeyEvent.VK_V);
+			R.keyRelease(KeyEvent.VK_CONTROL);
+			R.keyRelease(KeyEvent.VK_V);
+			
+			t(1);
+			
+			R.keyPress(KeyEvent.VK_ENTER);
+			R.keyRelease(KeyEvent.VK_ENTER);
+			t(1);
+			xp("XSave").click();
+			t(2);
+			xp("XBack").click();
+		 
+	}
+	
+	// add one employee from excel sheet
+	
+	public void oneemp() throws Exception {
+		
+		FileInputStream fis = new FileInputStream("C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\src\\data\\java\\Defects01.xlsx");
+		 XSSFWorkbook w = new XSSFWorkbook(fis);		  
+		  XSSFSheet sht = w.getSheet("addEmp");	
+			  
+			  int eid = (int) sht.getRow(3).getCell(0).getNumericCellValue();
+			  String eln = sht.getRow(3).getCell(1).getStringCellValue();
+			  String efn = sht.getRow(3).getCell(2).getStringCellValue();
+			  String emn = sht.getRow(3).getCell(3).getStringCellValue();
+			  String enn = sht.getRow(3).getCell(4).getStringCellValue();
+	
+			Actions A = new Actions(driver);		 
+			 A.moveToElement(xp("XPIM")).perform();	
+			 t(1);
+			 xp("XAdd").click();
+			 t(1);
+			 driver.switchTo().frame(xp("XF"));
+			 t(1);
+			 xp("XID").clear();
+			 xp("XID").sendKeys(String.valueOf(eid));
+			 xp("XLN").sendKeys(eln);
+			 xp("XFN").sendKeys(efn);
+			 xp("XMN").sendKeys(emn);
+			 xp("XNN").sendKeys(enn);
+			 
+			 t(1);
+			 
+			 A.moveToElement(xp("XPhoto")).click().perform();
+				
+				StringSelection ss = new StringSelection("C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\photos\\rashmi.jpg");
+				
+				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+				t(1);
+				
+				Robot R = new Robot();
+				
+				R.keyPress(KeyEvent.VK_CONTROL);
+				R.keyPress(KeyEvent.VK_V);
+				R.keyRelease(KeyEvent.VK_CONTROL);
+				R.keyRelease(KeyEvent.VK_V);
+				
+				t(1);
+				
+				R.keyPress(KeyEvent.VK_ENTER);
+				R.keyRelease(KeyEvent.VK_ENTER);
+				t(1);
+				xp("XSave").click();
+				t(1);
+				xp("XBack").click();	
+				t(1);
+				
+	}	
+	
+	// add multiple employees
+	public void addmulemp() throws Exception {
+			
+		FileInputStream fis = new FileInputStream("C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\src\\data\\java\\Defects01.xlsx");
+		 XSSFWorkbook w = new XSSFWorkbook(fis);		  
+		  XSSFSheet sht = w.getSheet("addEmp");	
+		  
+		  //for(int r=1; r<=sht.getLastRowNum(); r++) {
+		  for(int r=1; r<=2; r++) {
+			  int eid = (int) sht.getRow(r).getCell(0).getNumericCellValue();
+			  String eln = sht.getRow(r).getCell(1).getStringCellValue();
+			  String efn = sht.getRow(r).getCell(2).getStringCellValue();
+			  String emn = sht.getRow(r).getCell(3).getStringCellValue();
+			  String enn = sht.getRow(r).getCell(4).getStringCellValue();
+	
+			Actions A = new Actions(driver);		 
+			 A.moveToElement(xp("XPIM")).perform();	
+			 t(1);
+			 xp("XAdd").click();
+			 t(1);
+			 driver.switchTo().frame(xp("XF"));
+			 t(1);
+			 xp("XID").clear();
+			 xp("XID").sendKeys(String.valueOf(eid));
+			 xp("XLN").sendKeys(eln);
+			 xp("XFN").sendKeys(efn);
+			 xp("XMN").sendKeys(emn);
+			 xp("XNN").sendKeys(enn);
+			 
+			 t(1);
+			 
+			 A.moveToElement(xp("XPhoto")).click().perform();
+				
+				StringSelection ss = new StringSelection("C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\photos\\" +enn + ".jpg");
+				
+				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+				t(1);
+				
+				Robot R = new Robot();
+				
+				R.keyPress(KeyEvent.VK_CONTROL);
+				R.keyPress(KeyEvent.VK_V);
+				R.keyRelease(KeyEvent.VK_CONTROL);
+				R.keyRelease(KeyEvent.VK_V);
+				
+				t(1);
+				
+				R.keyPress(KeyEvent.VK_ENTER);
+				R.keyRelease(KeyEvent.VK_ENTER);
+				t(1);
+				ss(enn+ " before save");
+				xp("XSave").click();
+				t(1);
+				ss(enn+ " After save");
+				xp("XBack").click();	
+				t(1);
+				driver.switchTo().defaultContent();
+				ss(enn+ " After added");
+				t(1);
+				System.out.println("----Employee with " +enn + " is added successfully");
+			  
+		  }
+	
+	}
+	
+	// edit one employee
+	public void editoneemp() throws Exception {
+		
+		FileInputStream fis = new FileInputStream("C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\src\\data\\java\\Defects01.xlsx");
+		 XSSFWorkbook w = new XSSFWorkbook(fis);		  
+		  XSSFSheet sht = w.getSheet("addEmp");	
+		  
+		  String eln = sht.getRow(1).getCell(1).getStringCellValue();
+		  t(1);
+		  driver.switchTo().frame(xp("XF"));
+		  t(1);
+		  
+		  driver.findElement(By.partialLinkText(eln)).click();
+		  
+		  xp("XEdit").click();
+		  xp("XLN").sendKeys("aishwry");
+		  xp("XFN").sendKeys("ray");
+		  
+		
+	}
+}
