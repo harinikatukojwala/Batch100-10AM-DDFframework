@@ -1,13 +1,14 @@
 URL = http://127.0.0.1/orangehrm-2.5.0.2/login.php
 
 UN = selenium
-Pwd = ragiharuni
+Pwd = nihaan191117
 
 XUN = //input[@name='txtUserName']
 XPwd = //input[@name='txtPassword']
 XSub = //input[@type='Submit']
 
-XPIM = //li[@id='pim']
+XApim = /html/body/div[4]/ul/li[2]/a/span
+XPIM = //span[text()='PIM']
 XAdd = //span[text()='Add Employee']
 
 XF = //iframe[@id='rightMenu']

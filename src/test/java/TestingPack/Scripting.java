@@ -26,6 +26,8 @@ public class Scripting extends ReusedMethods {
 		 ss("After Login");
 		 t(1);
 		 
+		 System.out.println("---Login success---");
+		 
 	 }
 
 	
