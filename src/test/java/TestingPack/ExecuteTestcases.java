@@ -20,5 +20,9 @@ public class ExecuteTestcases extends BaseClass {
 		//S.oneemp();
 		S.addmulemp();
 		//S.editoneemp();
+		//S.editmulemp();
+		//S.deloneemp();
+		//S.delmulemp();
+		//S.delall();
 	}
 }

@@ -21,4 +21,19 @@ XPhoto = //input[@id='photofile']
 XSave = //input[@id='btnEdit']
 XBack = //input[@type='button']
 
-XEdit = //input[@id='btnEditPers']
+
+<!----for editing---->
+
+XEdit = //input[@value='Edit']
+Xsave = //input[@value='Save']
+Xback = //input[@value='Back']
+
+<!---for deleting--->
+Xcb = //input[starts-with(@value,'00')]
+Xcb1 = //input[@class='checkbox' and @value='0061']
+Xcb2 = //input[@class='checkbox' and @value='0062']
+Xcb3 = //input[@class='checkbox' and @value='0063']
+Xcb4 = //input[@class='checkbox' and @value='0064']
+Xcb5 = //input[@class='checkbox' and @value='0065']
+Xallcd = //input[@id='allCheck']
+XDel = //input[@value='Delete']

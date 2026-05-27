@@ -28,5 +28,18 @@ public class ReusedMethods extends ExecuteTestcases{
 		File T = new File("C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\TestEvidences\\" +e + ".jpg");
 		FileHandler.copy(S, T);
 	}
+	
+	public void editmul(String ln, String fn) {
+		
+		xp("XEdit").click();
+		  xp("XLN").clear();		  
+		  xp("XLN").sendKeys(ln);
+		  xp("XFN").clear();
+		  xp("XFN").sendKeys(fn);
+		  xp("Xsave").click();
+		  xp("Xback").click(); 
+		  driver.switchTo().defaultContent();
+
+	}
 
 }
