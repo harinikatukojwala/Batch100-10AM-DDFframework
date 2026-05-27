@@ -7,8 +7,12 @@ XUN = //input[@name='txtUserName']
 XPwd = //input[@name='txtPassword']
 XSub = //input[@type='Submit']
 
+<<<<<<< HEAD
 XApim = /html/body/div[4]/ul/li[2]/a/span
 XPIM = //span[text()='PIM']
+=======
+XPIM = //span[@class='drop current']
+>>>>>>> 7179e04c60374f4fece2d40ba3e0a2751b4bbb4a
 XAdd = //span[text()='Add Employee']
 
 XF = //iframe[@id='rightMenu']
@@ -22,6 +26,7 @@ XPhoto = //input[@id='photofile']
 XSave = //input[@id='btnEdit']
 XBack = //input[@type='button']
 
+<<<<<<< HEAD
 
 <!----for editing---->
 
@@ -38,3 +43,6 @@ Xcb4 = //input[@class='checkbox' and @value='0064']
 Xcb5 = //input[@class='checkbox' and @value='0065']
 Xallcd = //input[@id='allCheck']
 XDel = //input[@value='Delete']
+=======
+XEdit = //input[@id='btnEditPers']
+>>>>>>> 7179e04c60374f4fece2d40ba3e0a2751b4bbb4a

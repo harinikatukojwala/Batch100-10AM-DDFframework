@@ -25,6 +25,7 @@ public class Scripting extends ReusedMethods {
 		 xp("XSub").click();
 		 ss("After Login");
 		 t(1);
+		 System.out.println("---Login successful----");
 		 
 		 System.out.println("---Login success---");
 		 
