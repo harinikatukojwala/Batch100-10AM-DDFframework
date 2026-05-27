@@ -7,12 +7,8 @@ XUN = //input[@name='txtUserName']
 XPwd = //input[@name='txtPassword']
 XSub = //input[@type='Submit']
 
-<<<<<<< HEAD
 XApim = /html/body/div[4]/ul/li[2]/a/span
-XPIM = //span[text()='PIM']
-=======
 XPIM = //span[@class='drop current']
->>>>>>> 7179e04c60374f4fece2d40ba3e0a2751b4bbb4a
 XAdd = //span[text()='Add Employee']
 
 XF = //iframe[@id='rightMenu']
