@@ -22,15 +22,9 @@ public class BaseClass {
 	
 	 @BeforeClass
 	  public void openBrow() throws IOException {
-		 EdgeOptions options = new EdgeOptions();
-
-		options.addArguments("--remote-allow-origins=*");
-		options.addArguments("--disable-dev-shm-usage");
-		options.addArguments("--no-sandbox");
-		options.addArguments("--disable-gpu");
-		options.addArguments("--headless=new"); // only if running headless
-
-		driver = new EdgeDriver(options);
+		 System.setProperty("webdriver.edge.driver","C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\MyBrowser\\msedgedriver.exe");
+		 driver = new EdgeDriver();
+		 driver.manage().window().maximize();
 		 
 		 FileInputStream f = new FileInputStream("C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\src\\data\\java\\InputData");
 		 
