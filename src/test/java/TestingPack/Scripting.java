@@ -27,8 +27,6 @@ public class Scripting extends ReusedMethods {
 		 t(1);
 		 System.out.println("---Login successful----");
 		 
-		 System.out.println("---Login success---");
-		 
 	 }
 
 	
@@ -139,8 +137,8 @@ public class Scripting extends ReusedMethods {
 		 XSSFWorkbook w = new XSSFWorkbook(fis);		  
 		  XSSFSheet sht = w.getSheet("addEmp");	
 		  
-		  for(int r=1; r<=sht.getLastRowNum(); r++) {
-		  //for(int r=1; r<=2; r++) {
+		  //for(int r=1; r<=sht.getLastRowNum(); r++) {
+		  for(int r=1; r<=2; r++) {
 			  int eid = (int) sht.getRow(r).getCell(0).getNumericCellValue();
 			  String eln = sht.getRow(r).getCell(1).getStringCellValue();
 			  String efn = sht.getRow(r).getCell(2).getStringCellValue();

@@ -54,7 +54,7 @@
 			<version>3.5.5</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>fivemp.xml</suiteXmlFile>
+            <suiteXmlFile>twoemp.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
