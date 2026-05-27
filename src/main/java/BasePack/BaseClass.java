@@ -22,13 +22,8 @@ public class BaseClass {
 	
 	 @BeforeClass
 	  public void openBrow() throws IOException {
-<<<<<<< HEAD
-		 System.setProperty("webdriver.edge.driver","C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\MyBrowser\\msedgedriver.exe");
-		 driver = new EdgeDriver();
-=======
 		 System.setProperty("webdriver.chrome.driver","C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\MyBrowser\\chromedriver.exe");
 		 driver = new ChromeDriver();
->>>>>>> 7179e04c60374f4fece2d40ba3e0a2751b4bbb4a
 		 driver.manage().window().maximize();
 		 
 		 FileInputStream f = new FileInputStream("C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\src\\data\\java\\InputData");
