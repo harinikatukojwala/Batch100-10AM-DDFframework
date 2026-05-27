@@ -22,11 +22,11 @@ public class BaseClass {
 	
 	 @BeforeClass
 	  public void openBrow() throws IOException {
-		 System.setProperty("webdriver.chrome.driver","C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\MyBrowser\\chromedriver.exe");
-		 driver = new ChromeDriver();
+		 System.setProperty("webdriver.edge.driver","C:/Users/Admin/eclipse-workspace/SelePractice/MyBrowser/msedgedriver.exe");
+		 driver = new EdgeDriver();
 		 driver.manage().window().maximize();
 		 
-		 FileInputStream f = new FileInputStream("C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\src\\data\\java\\InputData");
+		 FileInputStream f = new FileInputStream("C:/Users/Admin/eclipse-workspace/SelePractice/src/data/java/InputData");
 		 
 		 obj = new Properties();
 		 obj.load(f);
