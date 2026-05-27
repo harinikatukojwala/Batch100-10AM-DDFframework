@@ -7,7 +7,7 @@ XUN = //input[@name='txtUserName']
 XPwd = //input[@name='txtPassword']
 XSub = //input[@type='Submit']
 
-XPIM = //span[text()='PIM']
+XPIM = //span[@class='drop current']
 XAdd = //span[text()='Add Employee']
 
 XF = //iframe[@id='rightMenu']
