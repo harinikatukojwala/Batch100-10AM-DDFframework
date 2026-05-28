@@ -183,6 +183,7 @@ public class Scripting extends ReusedMethods {
 				R.keyPress(KeyEvent.VK_ENTER);
 				R.keyRelease(KeyEvent.VK_ENTER);
 				t(1);
+				System.out.println("photo uploaded");
 				ss(enn+ " before save");
 				xp("XSave").click();
 				t(1);
