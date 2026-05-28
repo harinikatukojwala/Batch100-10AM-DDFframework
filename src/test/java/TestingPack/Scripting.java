@@ -166,10 +166,12 @@ public class Scripting extends ReusedMethods {
 			 
 			 System.out.println("photo click happens");
 				
-				StringSelection ss = new StringSelection("C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\photos\\" +enn + ".jpg");
+				StringSelection S = new StringSelection("C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\photos\\" +enn + ".jpg");
 				
-				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(S, null);
 				t(1);
+				
+				System.out.println("File selection happens");
 				
 				Robot R = new Robot();
 				
@@ -183,7 +185,6 @@ public class Scripting extends ReusedMethods {
 				R.keyPress(KeyEvent.VK_ENTER);
 				R.keyRelease(KeyEvent.VK_ENTER);
 				t(1);
-				System.out.println("photo uploaded");
 				ss(enn+ " before save");
 				xp("XSave").click();
 				t(1);
