@@ -161,8 +161,10 @@ public class Scripting extends ReusedMethods {
 			 xp("XNN").sendKeys(enn);
 			 
 			 t(1);
-			 System.out.println(" successfully entered the data");
+			 //System.out.println(" successfully entered the data");
 			 A.moveToElement(xp("XPhoto")).click().perform();
+			 
+			 System.out.println("photo click happens");
 				
 				StringSelection ss = new StringSelection("C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\photos\\" +enn + ".jpg");
 				
