@@ -150,6 +150,7 @@ public class Scripting extends ReusedMethods {
 			 t(1);
 			 xp("XAdd").click();
 			 t(1);
+			 System.out.println(" Navigated to PIM page");
 			 driver.switchTo().frame(xp("XF"));
 			 t(1);
 			 xp("XID").clear();
@@ -160,7 +161,7 @@ public class Scripting extends ReusedMethods {
 			 xp("XNN").sendKeys(enn);
 			 
 			 t(1);
-			 
+			 System.out.println(" successfully entered the data");
 			 A.moveToElement(xp("XPhoto")).click().perform();
 				
 				StringSelection ss = new StringSelection("C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\photos\\" +enn + ".jpg");
