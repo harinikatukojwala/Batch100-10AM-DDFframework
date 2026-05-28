@@ -165,25 +165,24 @@ public class Scripting extends ReusedMethods {
 			 A.moveToElement(xp("XPhoto")).click().perform();
 			 
 			 System.out.println("photo click happens");
+			 
+			 xp("XPhoto").sendKeys("C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\photos\\" +enn + ".jpg");
 				
-				StringSelection S = new StringSelection("C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\photos\\" +enn + ".jpg");
-				
-				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(S, null);
-				t(1);
-				
-				System.out.println("File selection happens");
-				
-				Robot R = new Robot();
-				
-				R.keyPress(KeyEvent.VK_CONTROL);
-				R.keyPress(KeyEvent.VK_V);
-				R.keyRelease(KeyEvent.VK_CONTROL);
-				R.keyRelease(KeyEvent.VK_V);
-				
-				t(1);
-				
-				R.keyPress(KeyEvent.VK_ENTER);
-				R.keyRelease(KeyEvent.VK_ENTER);
+//				StringSelection S = new StringSelection("C:\\Users\\Admin\\eclipse-workspace\\SelePractice\\photos\\" +enn + ".jpg");
+//				Toolkit.getDefaultToolkit().getSystemClipboard().setContents(S, null);
+//				t(1);
+//				
+//				Robot R = new Robot();
+//				
+//				R.keyPress(KeyEvent.VK_CONTROL);
+//				R.keyPress(KeyEvent.VK_V);
+//				R.keyRelease(KeyEvent.VK_CONTROL);
+//				R.keyRelease(KeyEvent.VK_V);
+//				
+//				t(1);
+//				
+//				R.keyPress(KeyEvent.VK_ENTER);
+//				R.keyRelease(KeyEvent.VK_ENTER);
 				t(1);
 				ss(enn+ " before save");
 				xp("XSave").click();
