@@ -35,10 +35,10 @@ public class BaseClass {
 	 
 	
 	  
-//	 @AfterMethod
-//	 public void closeBrow() {
-//		 driver.quit();
-//		 System.out.println("Test cases are executed successfully");
-//	 }
+	 @AfterMethod
+	 public void closeBrow() {
+		 driver.quit();
+		 System.out.println("Test cases are executed successfully");
+	 }
 
 }
